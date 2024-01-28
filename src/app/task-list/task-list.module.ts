@@ -4,6 +4,9 @@ import { CardComponent } from './components/card/card.component';
 import { InputComponent } from './components/input/input.component';
 import { SelectComponent } from './components/select/select.component';
 import { MainListComponent } from './pages/main-list.component';
+import { ListComponent } from './components/list/list.component';
+import { FormsModule } from '@angular/forms';
+import { AddTaskComponent } from './components/add-task/add-task.component';
 
 
 
@@ -12,10 +15,13 @@ import { MainListComponent } from './pages/main-list.component';
     MainListComponent,
     CardComponent,
     InputComponent,
-    SelectComponent
+    SelectComponent,
+    ListComponent,
+    AddTaskComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports:[
     MainListComponent

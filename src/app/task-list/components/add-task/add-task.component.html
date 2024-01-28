@@ -1,0 +1,13 @@
+<h3>Add Task</h3>
+<form class="d-flex my-3" (ngSubmit)="addTask()"> 
+    
+  <input type="text" 
+        class="form-control" 
+        placeholder="add task" 
+        [(ngModel)]="task.description"
+        name="description"
+        >
+
+  <button type="submit" class="btn btn-primary  mx-2">Add</button>
+    
+</form>

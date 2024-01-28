@@ -1,1 +1,29 @@
-{}
+{
+    "tasks": [
+           {
+        "id": "uuidV4()",
+        "description": "Crea un proyecto Angular usando Angular CLI.",
+        "done": false,
+        "priority": "high"
+    },
+    {
+        "id": "uuidV4()",
+        "description": "Establece un componente principal como contenedor del componente de lista de tareas.",
+        "done": true,
+        "priority": "low"
+    },
+    {
+        "id": "uuidV4()",
+        "description": "Implementa una propiedad para almacenar tareas.",
+        "done": false,
+        "priority": "low"
+    },
+    {
+        "id": "uuidV4()",
+        "description": "Crea una lista de tareas.",
+        "done": false,
+        "priority": "medium"
+    }
+    ]
+ 
+}

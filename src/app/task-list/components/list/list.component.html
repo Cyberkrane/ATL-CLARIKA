@@ -1,0 +1,15 @@
+<ul class="list-group gap-2">
+
+    <li class="list-group-item d-flex justify-content-between align-items-center" 
+        *ngFor="let task of taskList, let i = index"
+        >
+        {{task.description}} <i>id: {{task.id}} </i>
+       <button class="btn btn-danger mx-5" (click)="onDeleteById(task.id)">x</button>
+    </li>
+
+
+
+</ul>
+
+
+<!-- [ngClass]="{ 'bg-success': task.done, 'bg-danger': !task.done }" -->

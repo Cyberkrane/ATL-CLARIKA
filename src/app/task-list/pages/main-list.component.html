@@ -1,1 +1,20 @@
-<h1>Main Component</h1>
+<div class="container shadow p-3 rounded">
+
+    <h1 class="text-center">Angular Task List</h1>
+    <!-- ADD TASK -->
+
+    <task-add (onNewTask)="onNewTask($event)"></task-add>
+
+    <!-- TASK LIST -->
+    
+    <task-list [taskList]="taskList" (onDeleteID)="onDeleteTask($event)"></task-list>
+
+  
+    <!-- FILTERS
+    <div class="d-flex gap-2">
+        <button>All</button> <button>Done</button> <button>Not Done</button>
+    </div> -->
+
+</div>
+
+      
