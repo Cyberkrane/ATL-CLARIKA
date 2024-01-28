@@ -7,3 +7,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 2. Ejecutar ``` npm i ```
 3. Levantar el backend ``` npm run backend ```
 4. Ejecutar la app ```npm start ```  o  ``` ng serve -o ```
+
+## Patron de diseño
+Esta app utiliza un patron singleton ya que solo posee un componente principal.

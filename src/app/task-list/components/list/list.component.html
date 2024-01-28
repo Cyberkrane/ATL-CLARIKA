@@ -3,9 +3,8 @@
     <li class="list-group-item d-flex justify-content-between align-items-center" 
         *ngFor="let task of taskList, let i = index"
         >
-
-       {{i + 1}}. {{task.description}}
-       <button class="btn btn-danger mx-5" (click)="onDeleteById(i)">x</button>
+        {{task.description}} <i>id: {{task.id}} </i>
+       <button class="btn btn-danger mx-5" (click)="onDeleteById(task.id)">x</button>
     </li>
 
 

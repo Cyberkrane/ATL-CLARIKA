@@ -9,7 +9,7 @@ import { Task } from '../../interfaces/task.interface';
 export class ListComponent {
 
   @Output() 
-  public onDeleteID: EventEmitter<number> = new EventEmitter<number>();
+  public onDeleteID: EventEmitter<string> = new EventEmitter<string>();
 
   @Input()
   public taskList: Task[] = [
@@ -21,14 +21,11 @@ export class ListComponent {
     }
   ];
 
-  // onDeleteTask(index: number): void {
-  //   // this.taskList = this.taskList.filter((task) => task.id !== id);
-  //   console.log({index});
-  // }
-
-  onDeleteById(id: number): void {
+  onDeleteById(id: string): void {
+    if (!id) return;
+    
     this.onDeleteID.emit(id);
-    console.log({id});
+    console.log(`la tarea con el id: ${id} fue eliminada`);
   }
  
 }
