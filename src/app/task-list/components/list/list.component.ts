@@ -34,7 +34,6 @@ export class ListComponent {
 
   onTaskChecked(task: Task): void {
     this.showSuccess();
-    console.log('onTaskChecked: ', task);
   }
 
   showSuccess() {

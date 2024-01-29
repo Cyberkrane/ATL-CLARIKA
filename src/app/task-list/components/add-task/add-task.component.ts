@@ -21,20 +21,20 @@ export class AddTaskComponent {
 
   constructor(private toastr: ToastrService) { }
 
-  addTask():void {
-    console.log(this.task);
+  addTask(): void {
     if (this.task.description.trim().length === 0) {
       this.alertError();
       return;
     }
     this.onNewTask.emit(this.task);
-   this.showSuccess();
+    this.showSuccess();
+    
     // limpiar input
     this.task.description = "";
     this.task.priority = "low";
     this.task.done = false;
   }
- 
+
   alertError() {
     this.toastr.error("No puede agregar una tarea vacia");
   }

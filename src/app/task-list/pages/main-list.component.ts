@@ -4,8 +4,7 @@ import { Task } from "../interfaces/task.interface";
 
 @Component({
     selector: "app-main-list",
-    templateUrl: "./main-list.component.html",
-    styleUrls: ["./main-list.component.css"]
+    templateUrl: "./main-list.component.html"
 })
 export class MainListComponent {
 
