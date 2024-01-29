@@ -1,22 +1,24 @@
 <ul class="list-group gap-2">
 
-    <li class="card-task {{task.priority}}"  *ngFor="let task of taskList, let i = index">
+    <li class="li-task {{task.priority}}" *ngFor="let task of taskList, let i = index">
 
         <input type="checkbox" 
             class="form-check-input col-1" 
             name="{{task.id}}" 
-            [(ngModel)]="task.done" 
+            [(ngModel)]="task.done"
             (change)="onTaskChecked(task)"
-            >
-        
-            <p class="col-9" [ngClass]="{ 'completed': task.done, '': !task.done }">
-                {{task.description}} 
-            </p>
-            
-            <!-- <i class="align-self-end col-1 text-truncate">id: {{task.id}} </i> -->
+        >
 
-            <i class="bi bi-trash align-self-center btn btn-danger" (click)="onDeleteById(task.id)"></i>
-       <!-- <button class="btn btn-danger col-1" (click)="onDeleteById(task.id)">x</button> -->
+        <p class="col-9 text-truncate" 
+           [ngClass]="{ 'completed': task.done, '': !task.done }"
+        >
+            {{task.description}}
+        </p>
+
+        <!-- <i class="col-1 text-truncate">id: {{task.id}} </i> -->
+
+        <i class="bi bi-trash align-self-center btn btn-danger" (click)="onDeleteById(task.id)"></i>
+
 
     </li>
 

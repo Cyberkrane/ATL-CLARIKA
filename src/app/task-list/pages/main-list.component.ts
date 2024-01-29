@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from "@angular/core";
+import { Component } from "@angular/core";
 import { TaskService } from "../services/task.service";
 import { Task } from "../interfaces/task.interface";
 
@@ -8,7 +8,6 @@ import { Task } from "../interfaces/task.interface";
     styleUrls: ["./main-list.component.css"]
 })
 export class MainListComponent {
-
 
     constructor(private taskService: TaskService) { }
 

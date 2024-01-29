@@ -21,6 +21,7 @@ export class AddTaskComponent {
   addTask():void {
     console.log(this.task);
     if (this.task.description.trim().length === 0) {
+      alert("No puede agregar una tarea vacia");
       return;
     }
     this.onNewTask.emit(this.task);
