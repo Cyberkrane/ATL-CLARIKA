@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Task } from '../../interfaces/task.interface';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'task-list',
@@ -8,7 +9,7 @@ import { Task } from '../../interfaces/task.interface';
 })
 export class ListComponent {
 
-  @Output() 
+  @Output()
   public onDeleteID: EventEmitter<string> = new EventEmitter<string>();
   @Output()
   public onNewTask: EventEmitter<Task> = new EventEmitter<Task>();
@@ -22,17 +23,25 @@ export class ListComponent {
       priority: "low"
     }
   ];
- 
+
+  constructor(private toastr: ToastrService) { }
 
   onDeleteById(id: string): void {
     if (!id) return;
-    
     this.onDeleteID.emit(id);
-    console.log(`la tarea con el id: ${id} fue eliminada`);
+    this.eliminatedTask();
   }
 
   onTaskChecked(task: Task): void {
-    console.log('onTaskChecked: ',task);
+    this.showSuccess();
+    console.log('onTaskChecked: ', task);
   }
- 
+
+  showSuccess() {
+    this.toastr.success("Genial!!! has completado la tarea.");
+  }
+
+  eliminatedTask(): void {
+   this.toastr.info("la tarea fue eliminada");
+  }
 }

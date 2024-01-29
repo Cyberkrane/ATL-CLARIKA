@@ -6,12 +6,9 @@ import { v4 as uuidV4 } from 'uuid';
     providedIn: 'root'
 })
 export class TaskService {
+    
 
     public taskList: Task[] = [];
-
-    getAllTasks(): Task[] {
-        return [...this.taskList];
-    }
 
     addNewTask(task: Task): void {
         const newTask: Task = { ...task, id: uuidV4() };
