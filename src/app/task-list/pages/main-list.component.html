@@ -1,4 +1,4 @@
-<div class="container shadow p-3 rounded">
+<div class="container shadow p-3 rounded mt-3">
 
     <h1 class="text-center">Angular Task List</h1>
     <!-- ADD TASK -->
@@ -10,10 +10,18 @@
     <task-list [taskList]="taskList" (onDeleteID)="onDeleteTask($event)"></task-list>
 
   
-    <!-- FILTERS
+    <!-- FILTERS -->
+    <div class="d-flex justify-content-between mt-3">
+         <div class="d-flex gap-2">
+        <button class="btn btn-secondary">All Tasks</button>
+        <button class="btn btn-secondary">Completed</button> 
+        <button class="btn btn-secondary">Pending</button>
+    </div> 
     <div class="d-flex gap-2">
-        <button>All</button> <button>Done</button> <button>Not Done</button>
-    </div> -->
+        <button class="btn btn-danger">Clear Completed</button>
+    </div>
+    </div>
+   
 
 </div>
 
