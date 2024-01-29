@@ -1,32 +1,28 @@
-i{
-    font-size: 0.7rem;
-}
-
-.card-task{
+.li-task {
     margin: 15px 0;
-    padding: 12px;
-    font-size: 1.2rem;   
+    font-size: 1.2rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    overflow: hidden;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-content: center;
+
+    span{
+        background-color: rgb(223, 220, 220);
+        input{
+            height: 22px;
+            font-size: 25px;
+        }
+    }
+
+    i{
+        height: 48px;
+        font-size: 20px;
+    }
 }
 
-.low-priority{
-    background-color: rgb(14, 212, 14);
-    color: black;
-}
-
-.medium-priority{
-    background-color: rgb(209, 209, 3);
-    color: black;
-}
-.high-priority{
-    background-color: rgb(209, 3, 3);
-    color: rgb(250, 249, 249);
-}
-.completed{
-    color: rgb(14, 94, 242);
-    text-decoration: line-through;
+.completed {
+    color: rgb(124, 14, 242);
+    text-decoration: line-through 5px;
 }

@@ -7,5 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 2. Ejecutar ``` npm i ```
 3. Ejecutar la app ```npm start ```  o  ``` ng serve -o ```
 
-## Patron de diseño
-Esta app utiliza un patron singleton.
+## Caracteristicas principales de la app
+* Permite agregar y eliminar tareas.
+* Presenta tareas con casillas de verificación.
+* Muestra notificaciones de error, de exito y de confirmacion.

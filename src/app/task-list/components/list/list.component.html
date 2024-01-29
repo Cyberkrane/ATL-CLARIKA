@@ -1,26 +1,28 @@
 <ul class="list-group gap-2">
 
-    <li class="card-task" *ngFor="let task of taskList, let i = index">
+    <li class="li-task {{task.priority}}" 
+        *ngFor="let task of taskList, let i = index">
 
-        <input type="checkbox" 
-            class="form-check-input" 
-            name="{{task.id}}" 
-            [(ngModel)]="task.done" 
-            (change)="onTaskChecked(task)"
-            >
-        
-            <p [ngClass]="{ 'completed': task.done, '': !task.done }">
-                {{task.description}} 
-            </p>
-            
-            <i>id: {{task.id}} </i>
+      
+        <span class="input-group-text">
 
-       <button class="btn btn-danger mx-5" (click)="onDeleteById(task.id)">x</button>
+            <input type="checkbox" 
+                class="form-check" 
+                name="{{task.id}}" 
+                [(ngModel)]="task.done"
+                (change)="onTaskChecked(task)"    
+            >  
+
+        </span>
+
+        <div class="col text-truncate p-2" 
+           [ngClass]="{ 'completed': task.done, '': !task.done }"
+        >
+            {{task.description}}
+        </div>
+
+        <i class="bi bi-trash align-self-center btn btn-danger" (click)="onDeleteById(task.id)"></i>
 
     </li>
 
-
 </ul>
-
-<!-- list-group-item d-flex justify-content-between align-items-center -->
-<!-- [ngClass]="{ 'bg-success': task.done, 'bg-danger': !task.done }" -->
