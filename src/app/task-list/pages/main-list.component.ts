@@ -15,6 +15,10 @@ export class MainListComponent {
         return [...this.taskService.taskList];
     }
 
+    getAllTasks(): void {
+        this.taskService.getAllTasks();
+    }
+
     onDeleteTask(id: string): void {
         this.taskService.deleteTask(id);
     }

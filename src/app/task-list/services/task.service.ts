@@ -38,6 +38,10 @@ export class TaskService {
         }
     ];
 
+    getAllTasks(): Task[] {
+        return [...this.taskList];
+    }
+
     addNewTask(task: Task): void {
         const newTask: Task = { ...task, id: uuidV4() };
         this.taskList.push(newTask);

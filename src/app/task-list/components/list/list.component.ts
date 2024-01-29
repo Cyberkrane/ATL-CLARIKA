@@ -10,6 +10,8 @@ export class ListComponent {
 
   @Output() 
   public onDeleteID: EventEmitter<string> = new EventEmitter<string>();
+  @Output()
+  public onNewTask: EventEmitter<Task> = new EventEmitter<Task>();
 
   @Input()
   public taskList: Task[] = [
@@ -20,12 +22,17 @@ export class ListComponent {
       priority: "low"
     }
   ];
+ 
 
   onDeleteById(id: string): void {
     if (!id) return;
     
     this.onDeleteID.emit(id);
     console.log(`la tarea con el id: ${id} fue eliminada`);
+  }
+
+  onTaskChecked(task: Task): void {
+    console.log(task);
   }
  
 }
