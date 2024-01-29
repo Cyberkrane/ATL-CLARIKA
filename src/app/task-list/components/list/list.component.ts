@@ -32,7 +32,7 @@ export class ListComponent {
   }
 
   onTaskChecked(task: Task): void {
-    console.log(task);
+    console.log('onTaskChecked: ',task);
   }
  
 }

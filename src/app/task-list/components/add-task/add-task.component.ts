@@ -26,9 +26,9 @@ export class AddTaskComponent {
     this.onNewTask.emit(this.task);
     
     // limpiar input
-    // this.task.description = "";
-    // this.task.priority = "low";
-    // this.task.done = false;
+    this.task.description = "";
+    this.task.priority = "low";
+    this.task.done = false;
   }
  
 

@@ -1,13 +1,16 @@
-<h3>Add Task</h3>
-<form class="d-flex my-3" (ngSubmit)="addTask()"> 
-    
-  <input type="text" 
-        class="form-control" 
-        placeholder="add task" 
-        [(ngModel)]="task.description"
-        name="description"
-        >
+<form class="d-flex my-3" (ngSubmit)="addTask()">
 
-  <button type="submit" class="btn btn-primary  mx-2">Add</button>
-    
+  <input type="text" class="form-control" placeholder="add task" [(ngModel)]="task.description" name="description">
+
+  <select name="priority" aria-placeholder="priority" [(ngModel)]="task.priority">
+  <option class="low" value="low">Low</option> 
+  <option class="medium" value="medium">Medium</option> 
+  <option class="high" value="high">High</option>
+  </select>
+
+  <button type="submit" class="btn btn-primary  mx-2">
+    <i class="bi bi-plus align-self-center btn btn-primary"></i>
+  </button>
+
+
 </form>

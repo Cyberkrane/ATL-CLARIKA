@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: antiquewhite;
+}
+.low{
+    background-color: rgba(14, 212, 14, 0.547);
+    color: black;
+}
+
+.medium{
+    background-color: rgba(209, 209, 3, 0.628);
+    color: black;
+}
+.high{
+    background-color: rgba(173, 18, 18, 0.669);
+    color: rgb(250, 249, 249);
+}
