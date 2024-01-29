@@ -1,26 +1,28 @@
 <ul class="list-group gap-2">
 
-    <li class="li-task {{task.priority}}" *ngFor="let task of taskList, let i = index">
+    <li class="li-task {{task.priority}}" 
+        *ngFor="let task of taskList, let i = index">
 
-        <input type="checkbox" 
-            class="form-check-input col-1" 
-            name="{{task.id}}" 
-            [(ngModel)]="task.done"
-            (change)="onTaskChecked(task)"
-        >
+      
+        <span class="input-group-text">
 
-        <p class="col-9 text-truncate" 
+            <input type="checkbox" 
+                class="form-check" 
+                name="{{task.id}}" 
+                [(ngModel)]="task.done"
+                (change)="onTaskChecked(task)"    
+            >  
+
+        </span>
+
+        <div class="col text-truncate p-2" 
            [ngClass]="{ 'completed': task.done, '': !task.done }"
         >
             {{task.description}}
-        </p>
-
-        <!-- <i class="col-1 text-truncate">id: {{task.id}} </i> -->
+        </div>
 
         <i class="bi bi-trash align-self-center btn btn-danger" (click)="onDeleteById(task.id)"></i>
 
-
     </li>
-
 
 </ul>
